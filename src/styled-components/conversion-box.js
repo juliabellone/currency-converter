@@ -21,21 +21,34 @@ export const BoxHeader = styled.div`
   width: 100%;
   padding: 10px;
   box-sizing: border-box;
-`
+  `
 export const Selector = styled.select`
   border: none;
   width: 100%;
   background-color: #2e3d54;
   color: #fff;
-
+  
   height: 100%;
   -moz-appearance: none;
   -webkit-appearance: none;
 `
 
 export const BoxContent = styled.div`
-  background-color: #293247;
+  padding: 0;
   width: 100%;
   height: 80%;
+`
 
+export const Input = styled.input`
+  background-color: #293247;
+  border: none;
+  height: 100%;
+  width: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 30px;
+  &:focus{
+    outline: none;
+  }
 `
