@@ -1,17 +1,12 @@
 import React, { Fragment } from 'react';
-import { Box, Rate, BoxHeader, Selector, BoxContent } from "../styled-components/conversion-box";
-
+import { Box, Rate, BoxHeader, BoxContent } from "../styled-components/conversion-box";
+import Selector from './selector';
 export default () => (
   <Fragment>
     <Rate></Rate>
     <Box>
       <BoxHeader>
-        <Selector>
-          <option value="volvo">Volvo</option>
-          <option value="saab">Saab</option>
-          <option value="mercedes">Mercedes</option>
-          <option value="audi">Audi</option>
-        </Selector>
+        <Selector/>
       </BoxHeader>
       <BoxContent>
       </BoxContent>
