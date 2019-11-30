@@ -23,8 +23,12 @@ export const Content = styled.div`
 export const Title = styled.h1`
   color: #fff;
 `
+export const Rate = styled.span`
+  text-transform: uppercase;
+  color: #fff;
+`
 
-export const BoxesContainer = styled.div`
+export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,4 +37,11 @@ export const BoxesContainer = styled.div`
     flex-direction: row;
   }
 
+`
+
+export const BoxContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `
