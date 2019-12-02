@@ -37,7 +37,8 @@ export default ({ onSelection, onInputChange }) => {
         </Selector>
         <BoxContent>
           <input
-            onChange={(e) => sendInputValue(e.targetValue)}
+            type="number"
+            onChange={(e) => sendInputValue(e.target.value)}
           />
         </BoxContent>
       </Box>

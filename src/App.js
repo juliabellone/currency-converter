@@ -7,18 +7,18 @@ import { Grid, Content, Title, Container, BoxContainer, Rate } from "./styled-co
 function App() {
 
   const [currencies, setCurrencies] = useState(['USD', 'EUR']);
-
+  const [ammounts, setAmmounts] = useState(['',''])
   useEffect(() => {
 
   })
 
-  const getCurrency1 = (currency) => {
-    setCurrencies(currencies => currencies.map((item, index) => index === 0 ? currency : item) )
-  }
-  const getCurrency2 = (currency) => {
-    setCurrencies(currencies => currencies.map((item, index) => index === 1 ? currency : item) )
-  }
-  console.log(currencies)
+  const getCurrencyFrom = (currency) => setCurrencies(currencies => currencies.map((item, index) => index === 0 ? currency : item))
+  const getCurrencyTo = (currency) => setCurrencies(currencies => currencies.map((item, index) => index === 1 ? currency : item))
+  
+  const getInputFrom = (ammount) => setAmmounts(ammounts => ammounts.map((item, index) => index === 0 ? ammount : item))
+  const getInputTo = (ammount) => setAmmounts(ammounts => ammounts.map((item, index) => index === 1 ? ammount : item))
+  
+  console.log(ammounts)
   return (
     <div className="App">
       <Grid>
@@ -27,11 +27,11 @@ function App() {
           <Container>
             <BoxContainer>
               <Rate>{currencies[0]}{currencies[1]}</Rate>
-              <ConversionBox onSelection={getCurrency1} />
+              <ConversionBox onSelection={getCurrencyFrom} onInputChange={getInputFrom}/>
             </BoxContainer>
             <BoxContainer>
             <Rate>{currencies[1]}{currencies[0]}</Rate>
-              <ConversionBox onSelection={getCurrency2} />
+              <ConversionBox onSelection={getCurrencyTo} onInputChange={getInputTo}/>
             </BoxContainer>
           </Container>
         </Content>

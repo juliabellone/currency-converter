@@ -48,5 +48,10 @@ export const BoxContent = styled.div`
     &:focus{
       outline: none;
     }
+    &::-webkit-inner-spin-button, 
+    &::-webkit-outer-spin-button { 
+      -webkit-appearance: none; 
+      margin: 0; 
+    }
   }
 `
