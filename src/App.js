@@ -14,10 +14,12 @@ function App() {
   const shortReversedRate = rate ? (1/rate).toFixed(2) : '';
 
   useEffect(
-    async() => {
+  () => {
+    (async() => {
       const res = await getAllCurrencies()
       setAllCurrencies(res.currencies)
-    },[])
+    })()
+  },[])
 
   useEffect(
     () => {
@@ -65,6 +67,7 @@ function App() {
               </Selector>
               <BoxContent>
                 <input
+                  id='input-from'
                   value={amounts.from}
                   onChange={(e) => changeFrom(e)}
                 />
@@ -91,6 +94,7 @@ function App() {
               </Selector>
               <BoxContent>
                 <input
+                  id='input-to'
                   value={amounts.to}
                   onChange={(e) => changeTo(e)}
                 />
