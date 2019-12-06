@@ -6,8 +6,8 @@ export const getAllCurrencies = async() => {
   return res;
 }
 
-export const getExchangeRate = async(to) => {
-  const data = await fetch(`http://apilayer.net/api/live?access_key=aeae5c476f3927d585531d23456b680a&currencies=${to}`)
+export const getExchangeRates = async(currencies) => {
+  const data = await fetch(`http://apilayer.net/api/live?access_key=aeae5c476f3927d585531d23456b680a&currencies=${currencies.from},${currencies.to}`)
   const res = await data.json();
   return res;
 }
